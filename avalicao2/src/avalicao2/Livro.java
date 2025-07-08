@@ -4,16 +4,14 @@ import java.util.*;
 
 public class Livro {
 	private String titulo;
-	private String nome;
 	private String autor;
-	private int quantidade;
+	private int codigo;
 	private boolean disponibilidade;
 	
-	public Livro(String titulo,String nome,String autor, int quantidade,boolean disponibilidade ) {
+	public Livro(String titulo,String autor, int codigo,boolean disponibilidade ) {
 		this.titulo = titulo;
-		this.nome = nome;
 		this.autor = autor;
-		this.quantidade = quantidade;
+		this.codigo = codigo;
 		this.disponibilidade = disponibilidade;
 	}
 	
@@ -21,16 +19,13 @@ public class Livro {
 		return this.titulo;
 	}
 	
-	public String getNome() {
-		return this.nome;
-	}
 	
 	public String getAutor() {
 		return this.autor;
 	}
 	
-	public int getQuantidade() {
-		return this.quantidade;
+	public int getCodigo() {
+		return this.codigo;
 	}
 	
 	public boolean getDisponibilidade() {
@@ -41,20 +36,29 @@ public class Livro {
 		this.titulo = titulo;
 	}
 	
-	public void setNome() {
-		this.nome = nome;
-	}
 	
-	public void setAutor() {
+	public void setAutor(String autor) {
 		this.autor = autor;
 	}
 	
-	public void setQuantidade() {
-		this.quantidade =
+	public void setCodigo(int codigo) {
+		this.codigo = codigo;
 	}
 	
-	public void setDisponibilidade() {
+	public void setDisponibilidade(boolean disponibilidade) {
 		this.disponibilidade = disponibilidade;
 	}
+	
+	public void exibirDetalhes() {
+		String statusDisponibilidade;
+		if(this.disponibilidade) {
+			statusDisponibilidade ="Sim";
+		}else {
+			statusDisponibilidade ="Não";
+		}
+		System.out.println("Titulo: " + this.titulo +
+				           ", Autor: " + this.autor +
+				           ", Codigo: " + this.codigo +
+				           ", Disponivel: " + statusDisponibilidade);
+	}
 }
-//Alteracao na classe foi adicionado NOME e QUANTIDADE!

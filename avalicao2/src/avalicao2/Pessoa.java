@@ -26,8 +26,14 @@ public class Pessoa {
 	public void setContato() {
 		this.contato = contato;
 	}
-	public void setCodLivro() {
+	public void setCodLivro(int codlivro) {
 		this.codLivro = codLivro;
 	}
+	
+	public void exibirDetalhes() {
+	       System.out.println("Nome: " + this.nome +
+	                          ", Contato: " + this.contato +
+	                          ", Livro Emprestado (Código): " + this.codLivro);
+	    }
 }
 //classe criada nessa atualizacao
